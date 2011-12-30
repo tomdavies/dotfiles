@@ -42,4 +42,22 @@ function parse_git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
+# Retrieves time since last commit
+git_commit_time() {
+  g=$(git rev-parse --is-inside-work-tree 2>/dev/null) || return
+  time=$(git log --format="%cr" -n 1 )
+  sed "s/\([0-9]*\) \([ywdhms]\).*/\1\2)/"<<< "$time" #sed is crazy!
+}
+
+
+function rvm_info {
+  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
+  [ "$gemset" != "" ] && gemset=" @ $gemset"
+  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
+  [ "$version" != "" ] && version="$version"
+  local full="$version$gemset"
+  [ "$full" != "" ] && echo "$full "
+}
+
+
 PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
