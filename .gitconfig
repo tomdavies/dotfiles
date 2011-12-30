@@ -43,4 +43,7 @@
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
-	insteadOf = "gist:"
+        insteadOf = "gist:"
+[user]
+        name = Tom Davies
+        email = tom@tomdavies.net
