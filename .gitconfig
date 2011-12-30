@@ -1,8 +1,8 @@
 [alias]
-        st = status
-        ci = commit
-        co = checkout
-        br = branch
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
 [apply]
 	whitespace = fix
 [core]
@@ -25,11 +25,11 @@
 	changed = green
 	untracked = cyan
 [difftool "Kaleidoscope"]
-        cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
-        prompt = false
+	prompt = false
 [diff]
-        tool = Kaleidoscope
+	tool = Kaleidoscope
 [merge]
 	log = true
 [url "git@github.com:"]
@@ -43,7 +43,7 @@
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
-        insteadOf = "gist:"
+	insteadOf = "gist:"
 [user]
-        name = Tom Davies
-        email = tom@tomdavies.net
+	name = Tom Davies
+	email = tom@tomdavies.net
