@@ -50,11 +50,21 @@ alias c="tr -d '\n' | pbcopy"
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias p="cd ~/Projects"
+alias d="cd ~/Dropbox"
+alias s="cd ~/Sites"
 alias g="git"
 alias v="vim"
-alias m="mate ."
+alias e="decaf ."
+
+alias ttr='touch tmp/restart.txt'
+alias ls='ls -lha'
+alias 'gap'='git add --patch'
+alias cdf='cd "$(/sw/bin/posd)"'
+alias gcg='git co Gemfile.lock'
+alias grh='git reset --hard'
+alias pcopy='pwd | pbcopy'
+alias sassw='sass --watch sass/:public_html/assets/css/'
+
 
 # File size
 alias fs="stat -f \"%z bytes\""
