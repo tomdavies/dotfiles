@@ -2,4 +2,10 @@
 *.esproj
 .bundle
 .sass-cache
-REVISION
+REVISION.DS_Store
+wp-content/uploads/
+dcewww.tar
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace

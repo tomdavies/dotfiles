@@ -21,6 +21,9 @@ export LANG="en_GB"
 
 # Enable git command completion
 . ~/.git-bash-completion.sh
+. ~/.git-flow-completion.sh
+
+complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null  || complete -o default -o nospace -F _git g
 
 # bash-completion
 if [ -f /opt/local/etc/bash_completion ]; then

@@ -1,5 +1,5 @@
 # Make vim the default editor
-export EDITOR="decaf"
+export EDITOR="subl"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
@@ -14,7 +14,7 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 export SASS_DIRECTORY="sass"
 export CSS_DIRECTORY="public/assets/css"
 
-# export PATH="/Applications/MAMP/Library/bin/:/Applications/MAMP/bin/php5/bin/:/opt/local/bin:/usr/bin:/opt/local/sbin:/usr/local/share/npm/bin:~/bin:$PATH"
+#export PATH="/Applications/MAMP/Library/bin/:/Applications/MAMP/bin/php5/bin/:/opt/local/bin:/usr/bin:/opt/local/sbin:/usr/local/share/npm/bin:~/bin:$PATH"
 export PATH="/Applications/MAMP/bin/php5/bin/:/opt/local/bin:/usr/bin:/opt/local/sbin:/usr/local/share/npm/bin:~/bin:$PATH"
 
 export PATH="/opt/mongo/bin:/usr/local/mysql/bin:$PATH"
