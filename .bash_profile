@@ -1,6 +1,6 @@
 # Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.extra
 # ~/.extra can be used for settings you don’t want to commit
-for file in ~/Dropbox/dotfiles/.{bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/dotfiles/.{bash_prompt,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -19,7 +19,7 @@ export LANG="en_GB"
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
-#source ~/Dropbox/dotfiles/.rails.bash
+#source ~/dotfiles/.rails.bash
 
 # Enable git command completion
 . ~/.git-bash-completion.sh
