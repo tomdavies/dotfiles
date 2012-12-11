@@ -1,5 +1,11 @@
 [alias]
-        d = diff
+	a = !git add . && git status
+	au = !git add -u . && git status
+	aa = !git add . && git add -u . && git status
+        d = diff --color-words
+	dh = diff head
+	ds = diff stat
+	s = status
 	st = status
 	ci = commit
 	co = checkout
@@ -10,6 +16,13 @@
         f = flow
         ffs = flow feature start
         fff = flow feature finish
+	this = !git init && git add . && git commit -m \"initial commit\"
+	amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+	r  = !git ls-files -z --deleted | xargs -0 git rm
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+	ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+	master = checkout master
+	develop = checkout develop
 
 [apply]
 	whitespace = fix
@@ -18,8 +31,16 @@
 	attributesfile = ~/.gitattributes
 	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
         editor = nano
+	pager = less
 [color]
 	ui = auto
+	interactive = auto
+
+[color "blame"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -55,7 +76,7 @@
 	insteadOf = "gist:"
 [user]
 	name = Tom Davies
-        email = tom@tomdavies.net
+	email = tom@tomdavies.net
 [difftool "sourcetree"]
         cmd = opendiff \"$LOCAL\" \"$REMOTE\"
         path =

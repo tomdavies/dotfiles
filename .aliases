@@ -4,7 +4,8 @@ alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias be='bundle exec'
-
+alias sb="subl ."
+alias mm="bundle exec middleman"
 
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
@@ -67,7 +68,7 @@ alias 'gap'='git add --patch'
 alias cdf='cd "$(/sw/bin/posd)"'
 alias gcg='git co Gemfile.lock'
 alias grh='git reset --hard'
-alias pcopy='pwd | pbcopy'
+alias pcp='pwd | pbcopy'
 alias sassw='sass --watch sass/:public_html/assets/css/'
 
 

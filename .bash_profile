@@ -19,11 +19,17 @@ export LANG="en_GB"
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
+#source ~/Dropbox/dotfiles/.rails.bash
+
 # Enable git command completion
 . ~/.git-bash-completion.sh
 . ~/.git-flow-completion.sh
 
+#complete -C ~/.rake-completion.rb -o default rake
+
+
 complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null  || complete -o default -o nospace -F _git g
+
 
 # bash-completion
 if [ -f /opt/local/etc/bash_completion ]; then
